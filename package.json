@@ -1,12 +1,13 @@
 {
-	"name": "@krauters/immich-utils",
+	"name": "@willhopkins/immich-utils",
 	"description": " Scripts that wrangle the immich api to help you tame and manage your immich instance.",
-	"version": "0.1.0",
+	"version": "0.2.0",
 	"main": "dist/src/index.js",
 	"type": "module",
 	"scripts": {
 		"build": "tsc",
 		"dev": "npm run node -- ./src/index.ts",
+		"bulk-delete-assets-by-prefix": "npm run node -- ./src/bulk-delete-assets-by-prefix.ts",
 		"bulk-delete-assets-by-suffix": "npm run node -- ./src/bulk-delete-assets-by-suffix.ts",
 		"total-motion-photos": "npm run node -- ./src/total-motion-photos.ts",
 		"fix": "npm run lint -- --fix",
@@ -33,7 +34,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/krauters/immich-utils.git"
+		"url": "git+https://github.com/krauters/immich-utils.git"
 	},
 	"homepage": "https://buymeacoffee.com/coltenkrauter",
 	"license": "ISC",
@@ -46,7 +47,8 @@
 		"nodemon": "^3.1.9",
 		"ts-jest": "^29.2.5",
 		"ts-node": "^10.9.2",
-		"typescript": "^5.7.2"
+		"tsx": "^4.19.3",
+		"typescript": "^5.8.2"
 	},
 	"files": [
 		"dist",
@@ -56,5 +58,8 @@
 		"@immich/sdk": "^1.123.0",
 		"@krauters/logger": "^1.4.3",
 		"@krauters/utils": "^1.3.0"
+	},
+	"directories": {
+		"test": "test"
 	}
 }
